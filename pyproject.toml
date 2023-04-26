@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "async-api"
+version = "0.1.0"
+description = "Python API project skeleton. FastAPI for the API application, Celery for queueing and exceuting jobs. RabbitMQ for task broker for Celery. Redis to store result backend for Celery."
+authors = ["teoshuqi <77791600+teoshuqi@users.noreply.github.com>"]
+readme = "README.md"
+packages = [{include = "async_api"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+fastapi = "^0.95.1"
+celery = "^5.2.7"
+redis = "^4.5.4"
+uvicorn = "^0.21.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+start = "api.main:start"
